@@ -1,0 +1,167 @@
+html {
+  font-family: Roboto, Arial, sans-serif;
+  padding: 30px 10px;
+}
+
+button {
+  background: $button-bg-color;
+  border: 0;
+  color: $button-color;
+  height: 26px;
+  min-width: 60px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+
+  .title{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tasks-remove {
+    font-size: 14px;
+    color: rgba(74, 74, 74, 0.8);
+    cursor: pointer;
+  }
+}
+
+.task {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 54px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 5px;
+
+  &.done {
+    opacity: .7;
+  }
+
+  &:before {
+    content: "";
+    border-right: 1px solid #fff;
+    width: 0;
+    position: absolute;
+    left:50px;
+    top:0;
+    bottom:0;
+  }
+
+  .control-block {
+    width: 50px;
+    min-width: 50px;
+    text-align: center;
+    line-height: 0;
+
+    input {
+      display: none;
+      
+      &:checked~label {
+        &:after {
+          display: inline-block;
+        }
+      }
+    }
+    label {
+      border: 0;
+      border-radius: 3px;
+      width: 13px;
+      height: 13px;
+      display: inline-block;
+      background: #ffffff;
+      position: relative;
+      cursor: pointer;
+
+      &:after {
+        content:"";
+        display: none;
+        height: 4px;
+        width: 8px;
+        border:1px solid #000;
+        border-top: 0;
+        border-right: 0;
+        transform: rotate(-55deg) skewX(-20deg);
+        top: 2px;
+        position: absolute;
+        left: 2px;
+      }
+    }
+  }
+
+  .text-block,
+  .task-form {
+    flex-grow: 2;
+  }
+
+  .text-block{
+    color: #fff;
+    margin: 0 15px;
+  }
+
+  .task-form {
+    border: 0;
+    border-radius: 5px;
+    height: 36px;
+    background: #ffffff;
+    margin: 0 20px 0 10px;
+
+    .input-container {
+      input {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.task-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #DCDCDC;
+  border-radius: 5px;
+  height: 52px;
+  padding: 0 4px;
+  margin-top: 10px;
+
+  .input-container {
+    flex-grow: 2;
+
+    input {
+      width: 100%;
+      border: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .colors-block {
+    margin: 0 10px;
+    white-space: nowrap;
+    line-height: 0;
+
+    span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      margin: 0 3px;
+      border: 2px solid transparent;
+      cursor: pointer;
+
+      &.active {
+        border-color: #000;
+      }
+    }
+  }
+}
+
