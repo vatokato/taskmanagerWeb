@@ -1,6 +1,8 @@
 # taskmanagerWeb
 Задача: написать простое todo приложение. Ограничений в технологиях и инструментах нет (можно React, Vue или другой фреймворк или библиотеку).
 
+ДЕМО: https://vatokato.github.io/taskmanagerWeb/build/
+
 Ссылка на макет: https://www.figma.com/file/CybQTl2jPqJR63SEgvLRTZJg/Todo?node-id=0%3A1
 
 # Функции, которые необходимо реализовать:
